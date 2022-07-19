@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>js地下城-8f</title>
+
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/css/bootstrap.min.css"
+        integrity="sha384-GJzZqFGwb1QTTN6wy59ffF1BuGJpLSa9DkKMp0DgiMDm4iYMj70gZWKYbI706tWS" crossorigin="anonymous">
+
+    <link rel="stylesheet" href="./css/style.css">
+</head>
+
+<body>
+    <div id="app">
+        <div class="container-fluid">
+            <div class="row">
+                <div class="col-12 area">
+                    <div class="row justify-content-center">
+                        <div class="main row mt-5 start-area">
+                            <div class="box"><em>TIC</em></div>
+                            <div class="box oo"></div>
+                            <div class="box hollow-xx">
+                                <div class="cover"></div>
+                                <div class="cover2"></div>
+                            </div>
+                            <div class="box xx"></div>
+                            <div class="box"><em>TAC</em></div>
+                            <div class="box hollow-oo"></div>
+                            <div class="box hollow-oo"></div>
+                            <div class="box xx"></div>
+                            <div class="box"><em>TOE</em></div>
+                            <button id="start" class="btn mt-2 start-btn">START</button>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-12 area" style="background-color: #FF6D70;">
+                    <div class="row justify-content-center">
+                        <div class="main mt-5">
+                            <div class="scoreboard d-flex text-center">
+                                <div class="photo">○</div>
+                                <div class="point Opoint">0</div>
+                                <div class="photo">vs</div>
+                                <div class="point Xpoint">0</div>
+                                <div class="photo">X</div>
+                                <span class="turn">YOUR TURN!</span>
+                            </div>
+                            <div class="play-area mt-5">
+                                <div class="row justify-content-center play">
+                                    <div id="1" class="box border-top-0 border-left-0"></div>
+                                    <div id="2" class="box border-top-0"></div>
+                                    <div id="3" class="box border-top-0 border-right-0"></div>
+                                    <div id="4" class="box border-left-0"></div>
+                                    <div id="5" class="box"></div>
+                                    <div id="6" class="box border-right-0"></div>
+                                    <div id="7" class="box border-bottom-0 border-left-0"></div>
+                                    <div id="8" class="box border-bottom-0"></div>
+                                    <div id="9" class="box border-bottom-0 border-right-0"></div>
+                                </div>
+                                <div class="oiswin d-none">                                    
+                                </div>
+                                <div class="xiswin d-none">  
+                                    <div class="line"></div>
+                                    <div class="line"></div>
+                                </div>
+                                <div class="drew d-none">  
+                                    <div class="line"></div>
+                                    <div class="line"></div>
+                                </div>
+                            </div>
+
+                            <button id="restart" class="btn mt-4 start-btn">RESTART</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- <div id="app">
+        <div class="container-fluid">
+            <div class="row align-items-center justify-content-center">
+                <div class="main">
+                    <div class="row align-items-center justify-content-center mt-5">
+                        <div class="row align-items-center justify-content-center area">
+                            <div class="box"><em>TIC</em></div>
+                            <div class="box oo"></div>
+                            <div class="box hollow-xx">
+                                <div class="cover"></div>
+                                <div class="cover2"></div>
+                            </div>
+                            <div class="box xx"></div>
+                            <div class="box"><em>TAC</em></div>
+                            <div class="box hollow-oo"></div>
+                            <div class="box hollow-oo"></div>
+                            <div class="box xx"></div>
+                            <div class="box"><em>TOE</em></div>
+                            
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="container-fluid">
+            <div class="row align-items-center justify-content-center" style="background-color: #FF6D70;">
+                <div class="main">
+                    <div class="row align-items-center justify-content-center mt-5 area play-area no-gutters ">
+                        <div class="scoreboard d-flex text-center">
+                            <div class="photo">○</div>
+                            <div class="point">10</div>
+                            <div class="photo">vs</div>
+                            <div class="point">8</div>
+                            <div class="photo">X</div>
+                            <span class="turn">YOUR TURN!</span>
+                        </div>
+                        <div class="row col-12 align-items-center justify-content-center no-gutters ">
+                            <div class="row col-12 align-items-center justify-content-center play-box">
+                                <div class="box" id="1"></div>
+                                <div class="box" id="2"></div>
+                                <div class="box" id="3"></div>
+                                <div class="box" id="4"></div>
+                                <div class="box" id="5"></div>
+                                <div class="box" id="6"></div>
+                                <div class="box" id="7"></div>
+                                <div class="box" id="8"></div>
+                                <div class="box" id="9"></div>
+                            </div>
+                            <div class="row col-12 align-items-center justify-content-center play-box O-is-win d-none">
+                                WINNER
+                            </div>
+                            <button id="restart" class="btn btn-control start mt-2 col-12">restart</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div> -->
+
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
+        integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous">
+    </script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.6/umd/popper.min.js"
+        integrity="sha384-wHAiFfRlMFy6i5SRaxvfOCifBUQy1xHdJ/yoi7FRNXMRBu5WHdZYu1hA6ZOblgut" crossorigin="anonymous">
+    </script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/js/bootstrap.min.js"
+        integrity="sha384-B0UglyR+jN6CkvvICOB2joaf5I4l3gm9GU6Hc1og6Ls7i6U/mkkaduKaBhlAXv9k" crossorigin="anonymous">
+    </script>
+    <script src="https://cdn.jsdelivr.net/npm/vue"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="./js/all.js"></script>
+</body>
+
+</html>
